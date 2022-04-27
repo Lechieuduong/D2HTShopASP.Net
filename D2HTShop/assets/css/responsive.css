@@ -1,0 +1,168 @@
+﻿/* Tablet */
+@media only screen and (max-width: 800px) {
+    nav ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+        z-index: 1;
+    }
+    .dropbtn{
+        z-index: 2;
+    }
+
+    nav ul li {
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+            nav ul li:hover {
+                background: #35D0BA;
+            }
+
+            nav ul li a {
+                color: #fff;
+            }
+
+    .ti-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .ti-search {
+        padding-left: 20px;
+        height: 20px;
+    }
+
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info:before {
+        bottom: initial;
+        top: -75px;
+        right: 65px;
+        transform: scale(0.95);
+    }
+
+    .contact-form:before {
+        top: -13px;
+        left: initial;
+        right: 70px;
+    }
+
+    .square {
+        transform: translate(140%, 43%);
+        height: 350px;
+    }
+
+    .big-circle {
+        bottom: 75%;
+        transform: scale(0.9) translate(-40%, 30%);
+        right: 50%;
+    }
+
+    .text {
+        margin: 1rem 0 1.5rem 0;
+    }
+
+    .social-media {
+        padding: 1.5rem 0 0 0;
+    }
+
+    .wrapper{
+        margin-top: 30%;
+    }
+
+    .container-contact{
+        margin-top: 150px;
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: 600px) {
+    .row {
+        text-align: center;
+    }
+
+    .col-2, .col-3, .col-4 {
+        flex-basis: 100%;
+    }
+
+    .single-product .row {
+        text-align: left;
+    }
+
+    .single-product .col-2 {
+        padding: 20px 0;
+    }
+
+    .single-product h1 {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+
+    .container-contact {
+        padding: 1.5rem;
+    }
+
+    .contact-info:before {
+        display: none;
+    }
+
+    .square,
+    .big-circle {
+        display: none;
+    }
+
+    .contact-form,
+    .contact-info {
+        padding: 1.7rem 1.6rem;
+    }
+
+    .text,
+    .information,
+    .social-media p {
+        font-size: 0.8rem;
+    }
+
+    .title {
+        font-size: 1.15rem;
+    }
+
+    .social-icons a {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .icon {
+        width: 23px;
+    }
+
+    .input-container {
+        padding: 0.45rem 1.2rem;
+    }
+
+    .btn-contact {
+        padding: 0.45rem 1.2rem;
+    }
+
+    .dropdown-content {
+        text-align: center;
+    }
+
+    .wrapper {
+        margin-top: 45%;
+    }
+
+    .container-contact {
+        margin-top: 150px;
+    }
+}

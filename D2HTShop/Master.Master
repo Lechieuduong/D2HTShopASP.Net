@@ -1,0 +1,132 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="D2HTShop.Master" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang chủ</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="assets/css/responsive.css"/>
+    <link rel="stylesheet" href="themify-icons/themify-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"/>
+    <script src="script/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+</head>
+<body style="font-family: 'Poppins', sans-serif;">
+        <div class="header">
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                        <a href="index.aspx">
+                            <img src="./images/Screenshot 2022-03-29 204841.png" width="130px" />
+                        </a>
+                    </div>
+                    <nav>
+                        <ul id="MenuItems" style=" max-height: 21px; width: 140px;">
+                            <li><a href="index.aspx">Home</a></li>
+                            <li><a href="products.aspx">Products</a></li>
+                            <li><a href="about.aspx" >About</a></li>
+                            <li><a href="contact.aspx">Contact</a></li>
+                            <li id="loregisterlogin" runat="server"><a href="account.aspx">Account</a></li>
+                        </ul>
+                    </nav>
+                    <a href="cart.aspx"><span class="ti-shopping-cart" ></span></a>
+                    <asp:Label ID="TotalProduct" runat="server" Text="Label"></asp:Label>
+                    <span class="ti-menu" onclick="menutoggle()"></span>
+                    <span class="ti-search" onclick="search()"></span>
+                    
+                </div>
+
+                <form action="products.aspx">
+                    <div class="search-box">
+                        <input name="search" id="search" type="text" placeholder="Seach...">
+                        <button class="search-btn" style="width:45px; margin-bottom: -5.5px; background: #35D0BA; color: white; cursor:pointer; height: 30px">search</button>
+                    </div>  
+                </form>
+                       
+            </div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+
+        </div>
+        
+       
+
+        <!-- Footer  <a href="#" class="gototopbtn"> <i class="fas fa-arrow-up"></i> </a>-->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download Our App</h3>
+                        <p>Download App for Android and IOS devices</p>
+                        <div class="app-logo">
+                            <img src="./images/playstorelogo.png">
+                            <img src="./images/appstore.png">
+                        </div>
+                    </div>
+
+                    <div class="footer-col-2">
+                        <img src="./images/Screenshot 2022-03-29 204841.png" alt="">
+                        <p>Our Purpose Is To Sustainably Make the Pleasure and 
+                            Benefits of Technology Accesible to the Many
+                        </p>
+                    </div>
+
+                    <div class="footer-col-3">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li>Coupons</li>
+                            <li>Blog Post</li>
+                            <li>Return Policy</li>
+                            <li>Join Affiliate</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col-4">
+                        <h3>Follow us</h3>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                            <li>Instagram</li>
+                            <li>YouTube</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <p class="copyright">Copyright 2022 - D2HT Shop</p>
+            </div>
+        </div>
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+
+        function search() {
+            var searchBox = document.querySelector('.search-box');
+            if (searchBox.style.display == "none") {
+                searchBox.style.display = "block";
+            } else {
+                searchBox.style.display = "none";
+            }
+
+        }
+
+    </script>
+</body>
+</html>
